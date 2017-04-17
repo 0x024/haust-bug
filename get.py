@@ -4,7 +4,7 @@ import urllib2
 import lxml.html
 import cookielib
 import xlrd
-LOGIN_URL="http://my.haust.edu.cn/cas/login?service=http://210.43.0.37:8080/xgxt/home/xgsyPage.action"
+LOGIN_URL="http:///cas/login?service=http://210.43.0.37:8080/xgxt/home/xgsyPage.action"
 
 LOGIN_USERNAME='######'
 LOGIN_PASSWD='######'
@@ -43,7 +43,7 @@ def get_img():
 		name=info[i+331]
 		print ID
 		print name
-		IMG_URL="http://me.haust.edu.cn:9900/sys/yx/stu.do?method=getZPT&xh=%s"%ID
+		IMG_URL="http:9900/sys/yx/stu.do?method=getZPT&xh=%s"%ID
 		response1=opener.open(IMG_URL)
 		data=response1.read()
 		with open('./img/%s.%s.jpg'%(ID,name),"w+") as f:
